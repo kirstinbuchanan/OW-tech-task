@@ -1,0 +1,21 @@
+.tableRows {
+  padding: 0.5rem;
+  &:hover {
+    background-color: var(--chakra-colors-gray-50);
+  }
+}
+
+.tableCell {
+  padding: 12px;
+  font-size: 14px;
+}
+
+.table {
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+}
+.sortIcon {
+  margin-left: 1rem;
+  cursor: pointer;
+}

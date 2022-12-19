@@ -1,0 +1,40 @@
+{
+  "name": "ow-tech-task",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "cy:open": "cypress open"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.13",
+    "@chakra-ui/react": "^2.4.3",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "axios": "^1.2.0",
+    "framer-motion": "^6",
+    "google-map-react": "^2.2.0",
+    "leaflet": "^1.9.3",
+    "lodash.orderby": "^4.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.0",
+    "react-router-dom": "^6.4.4"
+  },
+  "devDependencies": {
+    "@types/google-map-react": "^2.1.7",
+    "@types/leaflet": "^1.9.0",
+    "@types/lodash": "^4.14.191",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@types/react-router-dom": "^5.3.3",
+    "@vitejs/plugin-react": "^2.2.0",
+    "cypress": "^12.1.0",
+    "sass": "^1.56.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.3"
+  }
+}
