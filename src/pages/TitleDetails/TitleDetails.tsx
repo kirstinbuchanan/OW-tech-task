@@ -11,9 +11,12 @@ import styles from './TitleDetails.module.scss';
 const TitleDetails: FunctionComponent = () => {
   const title = useLoaderData() as Title;
 
+  // Note: I used React-Leaflet/Leaflet as opposed to Google Maps API because it's free and open source.
+  // However, I would use the Google Maps API if I were to do this project again as styling react-leaflet is painful.
+
   return (
     <>
-      <Button colorScheme="teal" style={{ margin: '1rem', display: 'flex' }} aria-role="Back button">
+      <Button colorScheme="teal" style={{ margin: '1rem', display: 'flex' }} size={['sm', 'md']} aria-role="Back button">
         <Link to={'/'}>Back</Link>
       </Button>
 
@@ -25,7 +28,7 @@ const TitleDetails: FunctionComponent = () => {
               {title?.Tenure}
             </Badge>
           </Heading>
-          <Text fontSize="md">
+          <Text fontSize="md" size={['xs', 'md']}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, accusantium! Voluptates impedit recusandae rerum hic aperiam eos
             accusamus ratione? Magni adipisci quas sit hic iste eveniet similique quaerat labore commodi. Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Natus ad minima fugiat. Aliquam voluptas beatae doloribus saepe blanditiis illum ea voluptate quaerat nostrum expedita?

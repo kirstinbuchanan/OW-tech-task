@@ -5,7 +5,7 @@ import { usePagination } from '../../utils/getPagination';
 import Pagination from '../Pagination/Pagination';
 import { Table, Thead, Tbody, Tr, Th, Td, TableContainer } from '@chakra-ui/react';
 
-import styles from './Table.module.scss';
+import styles from './DataTable.module.scss';
 import { ArrowDownIcon, ArrowUpIcon, UpDownIcon } from '@chakra-ui/icons';
 import { orderBy } from 'lodash';
 
@@ -25,11 +25,13 @@ const DataTable: React.FunctionComponent = () => {
 
   const resolvedData = sortDirection ? orderBy(data, 'Title Number', [sortDirection]) : data;
 
+  // NOTE: If the user puts ?page=8 in the URL when there are only 5 pages, the table will be empty.
+  // A ZeroState component could be added to handle this to inform the user.
   const { currentPage, data: pagedData, numberOfPages } = usePagination(resolvedData, 5);
 
   return (
     <TableContainer data-testid="title-table">
-      <Table variant="simple" colorScheme="teal">
+      <Table variant="simple" colorScheme="teal" size={['sm', 'md']}>
         <Thead>
           <Tr>
             <Th>
@@ -64,6 +66,8 @@ interface LinkTableCellProps {
   children: React.ReactNode;
 }
 
+// This makes it so that the link is only on the text and not the whole cell as tr must have a child td.
+// An onClick handler could be passed to the tr but then React Router's Link could not be used.
 const LinkTableCell = ({ to, children }: LinkTableCellProps) => {
   return (
     <Td data-testid="title-table-cell">

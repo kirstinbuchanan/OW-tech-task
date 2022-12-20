@@ -1,11 +1,12 @@
-import { useQuery } from "./useQuery";
+import { useQuery } from './useQuery';
 
 export const usePagination = <T = any>(data: T[], rows: number) => {
   const query = useQuery();
 
-  const pageParam = query.get("page");
+  const pageParam = query.get('page');
 
   const page = pageParam ? parseInt(pageParam) : 1;
+
   return {
     currentPage: page,
     numberOfPages: data ? Math.ceil(data.length / rows) : 0,

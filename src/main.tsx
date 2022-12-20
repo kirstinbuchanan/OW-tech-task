@@ -8,6 +8,8 @@ import './index.css';
 import { Title } from './models/Title';
 import TitleDetails from './pages/TitleDetails/TitleDetails';
 
+// Out of scope of the task, but an error component/page could be passed to the errorElement key in the route object
+// Axios allows type safety as opposed to the fetch API.
 const router = createBrowserRouter([
   {
     path: '/',
