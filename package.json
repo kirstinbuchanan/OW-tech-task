@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "test": "start-server-and-test dev http-get://127.0.0.1:5173/ cy:run",
     "preview": "vite preview",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.13",
@@ -34,6 +36,7 @@
     "@vitejs/plugin-react": "^2.2.0",
     "cypress": "^12.1.0",
     "sass": "^1.56.1",
+    "start-server-and-test": "^1.15.2",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
   }

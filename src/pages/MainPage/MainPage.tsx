@@ -1,5 +1,5 @@
-import { FunctionComponent, useEffect, useState } from "react";
-import DataTable from "../components/Table/Table";
+import { FunctionComponent, useEffect, useState } from 'react';
+import DataTable from '../../components/Table/Table';
 
 interface MainPageProps {}
 
